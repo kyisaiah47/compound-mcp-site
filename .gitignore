@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# framework-managed instructions and local visual review
+AGENTS.md
+CLAUDE.md
+review/

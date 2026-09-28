@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3312",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "next start -p 3312",
+    "lint": "eslint",
+    "check": "node scripts/check-register.mjs",
+    "capture": "node scripts/capture.mjs",
+    "icons": "node scripts/icons.mjs"
   },
   "dependencies": {
     "@number-flow/react": "^0.6.2",
