@@ -155,7 +155,7 @@ export default function Home() {
       <header className="topbar">
         <a className="brand" href="#top">
           <span className="brand-mark">
-            <Icon name="plugs-connected" size={17} />
+            <img src="/icon.svg" alt="" width={22} height={22} />
           </span>
           <span>{PRODUCT.displayName}</span>
         </a>
