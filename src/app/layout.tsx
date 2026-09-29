@@ -10,6 +10,17 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Compound Labs MCP",
   description: "Eleven read-only lookup tools backed by live public data.",
+  metadataBase: new URL("https://compound-mcp.thecompound.tech"),
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Compound Labs MCP",
+    description: "Eleven read-only lookup tools backed by live public data.",
+    url: "https://compound-mcp.thecompound.tech/",
+    siteName: "Compound Labs MCP",
+    type: "website",
+    images: [{ url: "/opengraph-image" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
 };
 export default function RootLayout({
   children,
