@@ -1,0 +1,9 @@
+# Paths a daemon rewrites on its own schedule — see compound-ops/tools/deploy-dirty.sh.
+# One extended-regex per line, matched against the `git status --porcelain` path. A tree
+# whose ONLY dirty paths are listed here is not "somebody stopped mid-edit", so it still
+# deploys. Everything here fails OPEN — a wrong entry lets a deploy ship a real unfinished
+# edit — so only list paths a NAMED generator writes unattended.
+# @opennextjs/cloudflare opennextjs-cloudflare build — declared by nightly-deploy 2026-09-29
+^\.open-next/$
+# Cloudflare Wrangler CLI during wrangler deploy/build — declared by nightly-deploy 2026-09-29
+^\.wrangler/$
