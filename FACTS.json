@@ -1,0 +1,28 @@
+{
+  "claims": [
+    {
+      "id": "ada-title-ii-large-entity-deadline",
+      "claim": "ADA Title II web and mobile accessibility deadline for state and local governments with populations of 50,000 or more",
+      "value": "April 26, 2027",
+      "kind": "deadline",
+      "sourceUrl": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+      "sourceTitle": "ADA.gov — Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps",
+      "asOf": "2026-09-30",
+      "appearsOn": ["src/lib/surface.ts"],
+      "lastVerified": "2026-09-30",
+      "status": "verified"
+    },
+    {
+      "id": "ada-title-ii-small-entity-deadline",
+      "claim": "ADA Title II web and mobile accessibility deadline for state and local governments with populations below 50,000 and special districts",
+      "value": "April 26, 2028",
+      "kind": "deadline",
+      "sourceUrl": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+      "sourceTitle": "ADA.gov — Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps",
+      "asOf": "2026-09-30",
+      "appearsOn": ["src/lib/surface.ts"],
+      "lastVerified": "2026-09-30",
+      "status": "verified"
+    }
+  ]
+}
