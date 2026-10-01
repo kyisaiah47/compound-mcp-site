@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageViews from "@/components/site-view/PageViews";
+import ViewControls from "@/components/site-view/ViewControls";
+import { SimpleFrame } from "@/components/site-view/SimpleChrome";
 
 export const metadata: Metadata = {
   title: "What Is a Read-Only MCP Server?",
@@ -10,8 +13,8 @@ export const metadata: Metadata = {
 const specUrl = "https://modelcontextprotocol.io/specification/2025-06-18/server/tools";
 
 export default function ReadOnlyMcpGuide() {
-  return (
-    <main className="guide">
+  const body = (
+    <>
       <Link className="guide__back" href="/">← Compound Labs MCP</Link>
       <p className="eyebrow">Guide · updated 2026-09-29</p>
       <h1>What is a read-only MCP server?</h1>
@@ -35,6 +38,30 @@ export default function ReadOnlyMcpGuide() {
       <p>Run <code>npx -y compound-mcp</code> from an MCP client that supports local servers. Start with one narrow lookup, inspect the returned source and checked time, and treat a clear or passing result as scoped evidence rather than a universal compliance conclusion. The tool output is current for the source it checked, not a promise that every related record is covered.</p>
 
       <footer className="guide__sources"><span className="eyebrow">Sources fetched 2026-09-29</span><a href={specUrl}>Model Context Protocol specification: Tools</a><a href="https://github.com/kyisaiah47/compound-mcp/blob/main/README.md">Compound MCP README</a></footer>
-    </main>
+    </>
+  );
+  return (
+    <PageViews
+      simpleView={
+        <SimpleFrame>
+          <div className="sv-page">
+            <div className="sv-guide">{body}</div>
+            <nav className="sv-home-links" aria-label="Next steps">
+              <Link href="/#start">Copy the server command ↗</Link>
+              <Link href="/#example">See what each tool answers ↗</Link>
+              <a href="https://github.com/kyisaiah47/compound-mcp" target="_blank" rel="noreferrer">Read the source ↗</a>
+            </nav>
+          </div>
+        </SimpleFrame>
+      }
+      consoleView={
+        <>
+          <main className="guide">{body}</main>
+          <div className="foot-view">
+            <ViewControls />
+          </div>
+        </>
+      }
+    />
   );
 }

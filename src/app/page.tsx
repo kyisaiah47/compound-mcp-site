@@ -5,6 +5,10 @@ import { PRODUCT, SOURCES } from "@/lib/product";
 import { TOOLS, type ToolRow } from "@/lib/surface";
 type ToolGroup = 'stale' | 'directory' | 'compliance';
 import Icon from "@/components/Icon";
+import PageViews from "@/components/site-view/PageViews";
+import ViewControls from "@/components/site-view/ViewControls";
+import SimpleHome from "@/components/site-view/SimpleHome";
+import { SimpleFrame } from "@/components/site-view/SimpleChrome";
 const groups: {
   key: ToolGroup;
   label: string;
@@ -140,10 +144,25 @@ function Footer() {
         <p>© 2026 {PRODUCT.displayName}. A Compound Labs product.</p>
         <a href="mailto:hello@thecompound.tech">hello@thecompound.tech</a>
       </div>
+      <div className="foot-view">
+        <ViewControls />
+      </div>
     </footer>
   );
 }
 export default function Home() {
+  return (
+    <PageViews
+      simpleView={
+        <SimpleFrame>
+          <SimpleHome />
+        </SimpleFrame>
+      }
+      consoleView={<ConsoleHome />}
+    />
+  );
+}
+function ConsoleHome() {
   const [activeGroup, setActiveGroup] = useState<ToolGroup | "all">("all");
   const [selected, setSelected] = useState<string | null>(null);
   const visible =

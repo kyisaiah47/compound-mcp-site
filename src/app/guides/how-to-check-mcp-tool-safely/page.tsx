@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageViews from "@/components/site-view/PageViews";
+import ViewControls from "@/components/site-view/ViewControls";
+import { SimpleFrame } from "@/components/site-view/SimpleChrome";
 
 export const metadata: Metadata = {
   title: "How to Check an MCP Tool Before You Call It",
@@ -11,8 +14,8 @@ const specUrl = "https://modelcontextprotocol.io/specification/2025-06-18/server
 const readmeUrl = "https://github.com/kyisaiah47/compound-mcp/blob/main/README.md";
 
 export default function CheckMcpToolSafely() {
-  return (
-    <main className="guide">
+  const body = (
+    <>
       <Link className="guide__back" href="/">← Compound Labs MCP</Link>
       <p className="eyebrow">Guide · updated 2026-09-30</p>
       <h1>How to check an MCP tool before you call it</h1>
@@ -37,6 +40,30 @@ export default function CheckMcpToolSafely() {
       <p>Start with one narrow question, install the server with <code>npx -y compound-mcp</code>, and inspect the returned receipt before asking a follow-up. A clear result is evidence about the indexed source and its stated coverage; it is not proof that every related record is complete or current.</p>
 
       <footer className="guide__sources"><span className="eyebrow">Sources fetched 2026-09-30</span><a href={specUrl}>Model Context Protocol specification: Tools</a><a href={readmeUrl}>Compound MCP README</a></footer>
-    </main>
+    </>
+  );
+  return (
+    <PageViews
+      simpleView={
+        <SimpleFrame>
+          <div className="sv-page">
+            <div className="sv-guide">{body}</div>
+            <nav className="sv-home-links" aria-label="Next steps">
+              <Link href="/#start">Copy the server command ↗</Link>
+              <Link href="/#example">See what each tool answers ↗</Link>
+              <a href="https://github.com/kyisaiah47/compound-mcp" target="_blank" rel="noreferrer">Read the source ↗</a>
+            </nav>
+          </div>
+        </SimpleFrame>
+      }
+      consoleView={
+        <>
+          <main className="guide">{body}</main>
+          <div className="foot-view">
+            <ViewControls />
+          </div>
+        </>
+      }
+    />
   );
 }
