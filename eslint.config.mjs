@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Build output from opennextjs-cloudflare and wrangler, and any dist bundle. They are
+    // gitignored generated code, and linting them reported hundreds of errors in vendored files.
+    ".open-next/**",
+    ".wrangler/**",
+    "dist/**",
   ]),
 ]);
 
