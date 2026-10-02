@@ -6,10 +6,10 @@
 // rule by identity.
 //
 // Captured from /Users/admin/CompoundLabs/compound-mcp
-export const SURFACE_CAPTURED_AT = "2026-09-28T13:21:48.173Z";
+export const SURFACE_CAPTURED_AT = "2026-10-02T14:39:48.240Z";
 export const SERVER = {
- "name": "compound-mcp",
- "version": "0.5.0",
+ "name": "openlookup",
+ "version": "0.5.1",
  "protocol": "2025-06-18"
 } as const;
 export const TOOL_COUNT = 11;
@@ -406,14 +406,14 @@ export const TOOLS: ToolRow[] = [
  }
 ];
 export const PROBE = {
- "checked_at": "2026-09-28T08:46:54.735Z",
+ "checked_at": "2026-10-02T12:07:25.659Z",
  "repo_version": "0.5.0",
  "protocol_version": "2025-11-25",
  "server_version": "0.5.0",
  "tool_count": 11,
  "endpoints_checked": 10,
  "endpoints_failed": 0,
- "duration_ms": 6320,
+ "duration_ms": 6347,
  "failing": [],
  "endpoints": [
   {
@@ -421,7 +421,7 @@ export const PROBE = {
    "url": "https://xowekqdsttxwbhfxvusa.supabase.co/rest/v1/cb_ada_scans?status=eq.scanned&select=domain&limit=1",
    "http": 200,
    "bytes": 28,
-   "ms": 176,
+   "ms": 313,
    "ok": true
   },
   {
@@ -429,15 +429,15 @@ export const PROBE = {
    "url": "https://goodstanding.thecompound.tech/api/lookup?q=475262842",
    "http": 200,
    "bytes": 293,
-   "ms": 92,
+   "ms": 350,
    "ok": true
   },
   {
    "name": "rulestack",
    "url": "https://rulestack.thecompound.tech/api/configs?limit=1",
    "http": 200,
-   "bytes": 1816,
-   "ms": 769,
+   "bytes": 1824,
+   "ms": 520,
    "ok": true
   },
   {
@@ -445,23 +445,23 @@ export const PROBE = {
    "url": "https://skillworks.thecompound.tech/api/list?limit=1",
    "http": 200,
    "bytes": 2379,
-   "ms": 456,
+   "ms": 651,
    "ok": true
   },
   {
    "name": "blockdex",
    "url": "https://blockdex.thecompound.tech/api/search?q=button&limit=1",
    "http": 200,
-   "bytes": 4207,
-   "ms": 6297,
+   "bytes": 3853,
+   "ms": 6310,
    "ok": true
   },
   {
    "name": "tooldrift",
    "url": "https://tooldrift.thecompound.tech/api/leaderboard",
    "http": 200,
-   "bytes": 126178,
-   "ms": 337,
+   "bytes": 126101,
+   "ms": 687,
    "ok": true
   },
   {
@@ -469,7 +469,7 @@ export const PROBE = {
    "url": "https://stillshipping.thecompound.tech/api/dead?limit=1",
    "http": 200,
    "bytes": 42028,
-   "ms": 195,
+   "ms": 649,
    "ok": true
   },
   {
@@ -477,15 +477,15 @@ export const PROBE = {
    "url": "https://kitgrade.thecompound.tech/api/kits?limit=1",
    "http": 200,
    "bytes": 613,
-   "ms": 118,
+   "ms": 761,
    "ok": true
   },
   {
    "name": "stacktab",
    "url": "https://stacktab.thecompound.tech/api/catalogue",
    "http": 200,
-   "bytes": 69594,
-   "ms": 384,
+   "bytes": 69758,
+   "ms": 876,
    "ok": true
   },
   {
@@ -493,24 +493,24 @@ export const PROBE = {
    "url": "https://storeready.thecompound.tech/api/builders",
    "http": 200,
    "bytes": 21749,
-   "ms": 198,
+   "ms": 478,
    "ok": true
   }
  ],
  "outcomes": [
   {
    "tool": "lookup_nonprofit_status",
-   "ms": 204,
+   "ms": 471,
    "ok": true
   },
   {
    "tool": "lookup_ada_report",
-   "ms": 157,
+   "ms": 189,
    "ok": true
   },
   {
    "tool": "compare_ai_models",
-   "ms": 269,
+   "ms": 886,
    "ok": true
   }
  ]

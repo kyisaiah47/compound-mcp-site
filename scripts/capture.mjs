@@ -32,14 +32,14 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PKG_DIR = process.env.COMPOUND_MCP_DIR || resolve(ROOT, '..', 'compound-mcp');
 const OUT = resolve(ROOT, 'src/lib/surface.ts');
 
-if (!existsSync(resolve(PKG_DIR, 'bin/compound-mcp.js'))) {
+if (!existsSync(resolve(PKG_DIR, 'bin/openlookup.js'))) {
   throw new Error(`the package is not at ${PKG_DIR}. Set COMPOUND_MCP_DIR.`);
 }
 
 /* ── 1. tools/list, over the real stdio transport ─────────────────────────────────────── */
 const rpc = () =>
   new Promise((done, bad) => {
-    const p = spawn(process.execPath, ['bin/compound-mcp.js'], { cwd: PKG_DIR, stdio: ['pipe', 'pipe', 'pipe'] });
+    const p = spawn(process.execPath, ['bin/openlookup.js'], { cwd: PKG_DIR, stdio: ['pipe', 'pipe', 'pipe'] });
     const send = (o) => p.stdin.write(JSON.stringify(o) + '\n');
     let buf = '';
     let init = null;
@@ -72,7 +72,7 @@ const rpc = () =>
       jsonrpc: '2.0',
       id: 1,
       method: 'initialize',
-      params: { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'compound-mcp-site capture', version: '1' } },
+      params: { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'openlookup-site capture', version: '1' } },
     });
   });
 

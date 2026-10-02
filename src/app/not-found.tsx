@@ -18,7 +18,7 @@ export default function NotFound() {
     <PageViews
       simpleView={
         <SimpleFrame>
-          <SimplePage eyebrow="COMPOUND LABS MCP" title="This page does not exist" intro={<p>The address may be old, or it may have a typo.</p>}>
+          <SimplePage eyebrow="OPENLOOKUP" title="This page does not exist" intro={<p>The address may be old, or it may have a typo.</p>}>
             {links}
           </SimplePage>
         </SimpleFrame>
@@ -26,7 +26,7 @@ export default function NotFound() {
       consoleView={
         <>
           <main className="guide">
-            <Link className="guide__back" href="/">Compound Labs MCP</Link>
+            <Link className="guide__back" href="/">OpenLookup</Link>
             <h1>This page does not exist.</h1>
             <p className="guide__lead">The address may be old, or it may have a typo.</p>
             {links}

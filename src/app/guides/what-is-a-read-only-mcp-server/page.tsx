@@ -6,7 +6,7 @@ import { SimpleFrame } from "@/components/site-view/SimpleChrome";
 
 export const metadata: Metadata = {
   title: "What Is a Read-Only MCP Server?",
-  description: "A practical guide to read-only MCP tools, their boundaries, and how to try Compound Labs MCP.",
+  description: "A practical guide to read-only MCP tools, their boundaries, and how to try OpenLookup.",
   alternates: { canonical: "/guides/what-is-a-read-only-mcp-server" },
 };
 
@@ -15,10 +15,10 @@ const specUrl = "https://modelcontextprotocol.io/specification/2025-06-18/server
 export default function ReadOnlyMcpGuide() {
   const body = (
     <>
-      <Link className="guide__back" href="/">← Compound Labs MCP</Link>
+      <Link className="guide__back" href="/">← OpenLookup</Link>
       <p className="eyebrow">Guide · updated 2026-09-29</p>
       <h1>What is a read-only MCP server?</h1>
-      <p className="guide__lead">A read-only MCP server gives an AI application tools for retrieving information without giving those tools permission to create, edit, or delete records. Compound Labs MCP is a small example: install it with <code>npx -y compound-mcp</code>, then let an MCP client call eleven lookup tools backed by public data.</p>
+      <p className="guide__lead">A read-only MCP server gives an AI application tools for retrieving information without giving those tools permission to create, edit, or delete records. OpenLookup is a small example: install it with <code>npx -y openlookup</code>, then let an MCP client call eleven lookup tools backed by public data.</p>
 
       <h2>What does MCP let a server expose?</h2>
       <p>The official MCP specification says that tools let language models interact with external systems, including querying databases, calling APIs, and performing computations. Each tool has a name, description, and input schema. A client discovers them with <code>tools/list</code> and invokes one with <code>tools/call</code>. <a href={specUrl}>Read the MCP tools specification</a>.</p>
@@ -31,13 +31,13 @@ export default function ReadOnlyMcpGuide() {
         <li>Check the returned receipt, date, and coverage limits before relying on the answer.</li>
       </ol>
 
-      <h2>How does Compound Labs MCP return an answer?</h2>
-      <p>Compound Labs MCP exposes eleven read-only lookup tools in three groups: stale facts, directories, and compliance. The package returns text in <code>content</code> for compatibility and structured data in <code>structuredContent</code> for clients that support it. The landing page lists each tool, its arguments, its public data boundary, and whether it requires credentials.</p>
+      <h2>How does OpenLookup return an answer?</h2>
+      <p>OpenLookup exposes eleven read-only lookup tools in three groups: stale facts, directories, and compliance. The package returns text in <code>content</code> for compatibility and structured data in <code>structuredContent</code> for clients that support it. The landing page lists each tool, its arguments, its public data boundary, and whether it requires credentials.</p>
 
       <h2>How do I try a read-only MCP server?</h2>
-      <p>Run <code>npx -y compound-mcp</code> from an MCP client that supports local servers. Start with one narrow lookup, inspect the returned source and checked time, and treat a clear or passing result as scoped evidence rather than a universal compliance conclusion. The tool output is current for the source it checked, not a promise that every related record is covered.</p>
+      <p>Run <code>npx -y openlookup</code> from an MCP client that supports local servers. Start with one narrow lookup, inspect the returned source and checked time, and treat a clear or passing result as scoped evidence rather than a universal compliance conclusion. The tool output is current for the source it checked, not a promise that every related record is covered.</p>
 
-      <footer className="guide__sources"><span className="eyebrow">Sources fetched 2026-09-29</span><a href={specUrl}>Model Context Protocol specification: Tools</a><a href="https://github.com/kyisaiah47/compound-mcp/blob/main/README.md">Compound MCP README</a></footer>
+      <footer className="guide__sources"><span className="eyebrow">Sources fetched 2026-09-29</span><a href={specUrl}>Model Context Protocol specification: Tools</a><a href="https://github.com/kyisaiah47/openlookup/blob/main/README.md">OpenLookup README</a></footer>
     </>
   );
   return (
@@ -49,7 +49,7 @@ export default function ReadOnlyMcpGuide() {
             <nav className="sv-home-links" aria-label="Next steps">
               <Link href="/#start">Copy the server command ↗</Link>
               <Link href="/#example">See what each tool answers ↗</Link>
-              <a href="https://github.com/kyisaiah47/compound-mcp" target="_blank" rel="noreferrer">Read the source ↗</a>
+              <a href="https://github.com/kyisaiah47/openlookup" target="_blank" rel="noreferrer">Read the source ↗</a>
             </nav>
           </div>
         </SimpleFrame>

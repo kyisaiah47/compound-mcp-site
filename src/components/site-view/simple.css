@@ -1,4 +1,4 @@
-/* The Simple view for Compound Labs MCP: the kit's --sv-* aliases mapped onto this site's own
+/* The Simple view for OpenLookup: the kit's --sv-* aliases mapped onto this site's own
  * tokens. Sans carries sentences; mono carries commands, tool names and small labels only. */
 .site-surface, .sv-welcome {
   --sv-bg: var(--bg);

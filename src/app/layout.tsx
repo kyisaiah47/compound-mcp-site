@@ -13,15 +13,15 @@ const mono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 export const metadata: Metadata = {
-  title: "Compound Labs MCP",
+  title: "OpenLookup",
   description: "Eleven read-only lookup tools backed by live public data.",
   metadataBase: new URL("https://compound-mcp.thecompound.tech"),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Compound Labs MCP",
+    title: "OpenLookup",
     description: "Eleven read-only lookup tools backed by live public data.",
     url: "https://compound-mcp.thecompound.tech/",
-    siteName: "Compound Labs MCP",
+    siteName: "OpenLookup",
     type: "website",
     images: [{ url: "/opengraph-image" }],
   },
@@ -33,7 +33,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Compound Labs MCP",
+    name: "OpenLookup",
     url: "https://compound-mcp.thecompound.tech",
     publisher: {
       "@type": "Organization",
@@ -52,7 +52,7 @@ export default function RootLayout({
           welcome={
             <Welcome
               copy={{
-                name: "Compound Labs MCP",
+                name: "OpenLookup",
                 mark: <Mark />,
                 eyebrow: "YOUR AGENT. CURRENT FACTS.",
                 question: "Does your agent answer from facts that have changed?",
