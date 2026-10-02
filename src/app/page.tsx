@@ -133,15 +133,10 @@ function Footer() {
         </div>
       </div>
       <div className="credit">
-        <span>Built by</span>
-        <img
-          className="studio-credit-mark"
-          src="/brand/compound-labs.svg"
-          alt="Compound Labs"
-          width={20}
-          height={20}
-        />
-        <p>© 2026 {PRODUCT.displayName}. A Compound Labs product.</p>
+        <p>
+          <a className="studio-credit" href="https://thecompound.tech/?utm_source=compound-mcp-site&utm_medium=studio_credit">Built by Compound Labs</a>
+        </p>
+        <p>© 2026 {PRODUCT.displayName}.</p>
         <a href="mailto:hello@thecompound.tech">hello@thecompound.tech</a>
       </div>
       <div className="foot-view">

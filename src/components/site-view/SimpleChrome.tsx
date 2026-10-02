@@ -40,10 +40,7 @@ export function SimpleFooter() {
           <a href="mailto:hello@thecompound.tech">Contact ↗</a>
         </nav>
         <p className="sv-credit">
-          Built by
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="studio-credit-mark" src="/brand/compound-labs.svg" alt="Compound Labs" width={20} height={20} />
-          Compound Labs
+          <a href="https://thecompound.tech/?utm_source=compound-mcp-site&utm_medium=studio_credit">Built by Compound Labs</a>
         </p>
       </div>
       <ViewControls />

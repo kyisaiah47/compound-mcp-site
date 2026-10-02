@@ -19,11 +19,12 @@ css.includes('#AEBA5C') && css.includes('#C1CE6F') ? ok('accent', 'declared acce
 css.includes('minmax(560px,1fr)') || css.includes('minmax(560px, 1fr)') ? ok('shell', 'product shell declared') : fail('shell', 'shell sum missing');
 surface.includes('TOOL_COUNT = 11') && (surface.match(/"name":/g) || []).length >= 11 ? ok('tool surface', '11 captured tool rows') : fail('tool surface', 'tool count is not 11');
 product.includes('SOURCES') && page.includes('SOURCES.map') ? ok('sources', 'every page source row is rendered') : fail('sources', 'source ledger is not rendered');
-page.includes('alt="Compound Labs"') && page.includes('A Compound Labs product.') && page.includes('hello@thecompound.tech') && layout.includes('thecompound.tech/#organization') ? ok('studio credit', 'publisher, mark, copyright, and contact') : fail('studio credit', 'credit layer missing');
+// Since 2026-10-02 the credit is the anchor text "Built by Compound Labs", no mark, and the footer
+// carries no "A Compound Labs product" sentence (compound-ops/standards/STUDIO-CREDIT-SEAL.md).
+page.includes('href="https://thecompound.tech/?utm_source=compound-mcp-site&utm_medium=studio_credit">Built by Compound Labs</a>') && !/studio-credit-mark|a compound labs product/i.test(page + read('src/components/site-view/SimpleChrome.tsx') + css) && page.includes('hello@thecompound.tech') && layout.includes('thecompound.tech/#organization') ? ok('studio credit', 'publisher, the text credit with no mark and no product sentence, and contact') : fail('studio credit', 'credit layer missing, or a mark or "A Compound Labs product" came back');
 smooth.includes('allowNestedScroll: true') && smooth.includes('prefers-reduced-motion') && smooth.includes('lerp: 0.35') ? ok('lenis', 'nested scroll and reduced motion guard') : fail('lenis', 'Lenis settings missing');
 page.includes('TOOL_COUNT') || page.includes('{TOOLS.length}') ? ok('figures', 'tool count comes from the captured surface') : fail('figures', 'typed figure found');
 deploy.indexOf('npm run check') < deploy.indexOf('npx opennextjs-cloudflare build') ? ok('deploy order', 'check runs before build') : fail('deploy order', 'gate does not run before build');
 deploy.includes('scripts/verify-cf.mjs') ? ok('deploy verify', 'worker verification is terminal') : fail('deploy verify', 'verify gate missing');
-existsSync(resolve(ROOT, 'public/brand/compound-labs.svg')) ? ok('mark bytes', 'Compound Labs mark exists') : fail('mark bytes', 'mark missing');
 existsSync(resolve(ROOT, 'src/app/robots.ts')) && existsSync(resolve(ROOT, 'src/app/sitemap.ts')) && existsSync(resolve(ROOT, 'src/app/llms.txt/route.ts')) ? ok('crawl surface', 'robots, sitemap, and llms route') : fail('crawl surface', 'crawl route missing');
 if (process.exitCode) process.exit(1);
