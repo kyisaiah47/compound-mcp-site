@@ -138,7 +138,7 @@ function Footer() {
           className="studio-credit-mark"
           src="/brand/compound-labs.svg"
           alt="Compound Labs"
-          width={80}
+          width={20}
           height={20}
         />
         <p>© 2026 {PRODUCT.displayName}. A Compound Labs product.</p>
