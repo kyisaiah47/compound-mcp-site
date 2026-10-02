@@ -32,8 +32,8 @@ export function SimpleFooter() {
       <div>
         <Link href="/">{PRODUCT.displayName}</Link>
         <nav aria-label="Footer">
-          <Link href="/guides/what-is-a-read-only-mcp-server">What is a read-only MCP server</Link>
-          <Link href="/guides/how-to-check-mcp-tool-safely">How to check an MCP tool</Link>
+          <Link href="/guides/what-is-a-read-only-mcp-server">Read-only MCP servers</Link>
+          <Link href="/guides/how-to-check-mcp-tool-safely">Checking an MCP tool</Link>
           <a href={PRODUCT.npm} target="_blank" rel="noreferrer">
             npm ↗
           </a>

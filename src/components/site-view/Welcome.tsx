@@ -119,7 +119,7 @@ export default function Welcome({ copy }: { copy: WelcomeCopy }) {
       </section>
       <section className="sv-welcome-choose">
         <div>
-          <h3>How would you like to explore?</h3>
+          <h3>Choose how to explore.</h3>
           <p>You can switch anytime.</p>
         </div>
         <div className="sv-choices">
@@ -129,7 +129,7 @@ export default function Welcome({ copy }: { copy: WelcomeCopy }) {
               <span aria-hidden="true">↗</span>
             </span>
             <strong>See more at once.</strong>
-            <span>A compact layout with more data and controls on screen.</span>
+            <span>This layout puts more data and controls on screen.</span>
           </button>
           <button type="button" onClick={() => select('simple')}>
             <span>
@@ -137,7 +137,7 @@ export default function Welcome({ copy }: { copy: WelcomeCopy }) {
               <span aria-hidden="true">↗</span>
             </span>
             <strong>Start with the essentials.</strong>
-            <span>A roomier overview with details you can open as you go.</span>
+            <span>This overview gives you more room and lets you open details as you go.</span>
           </button>
         </div>
       </section>

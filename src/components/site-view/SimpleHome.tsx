@@ -35,10 +35,10 @@ export default function SimpleHome() {
           <span className="sv-eyebrow">READ-ONLY LOOKUPS · LIVE PUBLIC DATA</span>
           <h1>{PRODUCT.subhead}</h1>
           <p>
-            {PRODUCT.displayName} gives an MCP client {TOOLS.length} read-only lookup tools backed by live public
-            data. The package reads public endpoints and returns a structured result.
+            {PRODUCT.displayName} provides an MCP client {TOOLS.length} read-only lookup tools backed by live
+            public data. The package reads public endpoints and returns a structured result.
           </p>
-          <div className="sv-qualifier">No credentials. Read only. Version {PRODUCT.version}.</div>
+          <div className="sv-qualifier">The server requires no credentials and only reads data. It is version {PRODUCT.version}.</div>
         </div>
 
         <div className="sv-card" id="start">
@@ -47,9 +47,9 @@ export default function SimpleHome() {
             <span>STDIO</span>
           </div>
           <h2>Add it to your MCP client.</h2>
-          <p className="sv-card-sub">Add this command as a local server in any MCP client that runs one.</p>
+          <p className="sv-card-sub">Add this command as a local server to any MCP client that runs one.</p>
           <CopyCommand command={PRODUCT.install} label="Server command" />
-          <p className="sv-terms">No account and no API key. The server runs through npx.</p>
+          <p className="sv-terms">The server needs no account or API key and runs through npx.</p>
         </div>
       </section>
 
@@ -57,9 +57,9 @@ export default function SimpleHome() {
         <div className="sv-section-intro">
           <div>
             <span className="sv-eyebrow">02 / WHAT AN AGENT CAN ASK</span>
-            <h2>One tool at a time.</h2>
+            <h2>Tools run one at a time.</h2>
           </div>
-          <p>Pick a tool to see what it answers, what it needs and where it reads from.</p>
+          <p>Pick a tool to see what it answers, what it needs, and where it reads data from.</p>
         </div>
         <div className="sv-result">
           <div className="sv-step">
@@ -75,7 +75,7 @@ export default function SimpleHome() {
           <div className="sv-result-summary">
             <h3>{tool.title}.</h3>
             <p>
-              It reads {source(tool)}. It does not write, delete, or require credentials.
+              It reads {source(tool)}. It does not write or delete data and requires no credentials.
             </p>
           </div>
           <Disclosure title="What the tool says it does">
@@ -114,7 +114,7 @@ export default function SimpleHome() {
             <span className="sv-eyebrow">03 / WHAT IT COSTS</span>
             <h2>It is free.</h2>
           </div>
-          <p>There is no account, no key and no paid step. The package is on npm and GitHub.</p>
+          <p>You need no account, key, or paid step. The package is on npm and GitHub.</p>
         </div>
         <div className="sv-cards">
           <div>
@@ -126,15 +126,15 @@ export default function SimpleHome() {
             <p>Every call is read only and idempotent. No tool writes or deletes anything.</p>
           </div>
           <div>
-            <h3>Answers carry a date.</h3>
-            <p>A receipt or date travels with the results where the package provides one.</p>
+            <h3>Results carry a date.</h3>
+            <p>Where the package provides one, results include a receipt or date.</p>
           </div>
         </div>
       </section>
 
       <nav className="sv-home-links" aria-label="Next steps">
-        <Link href="/guides/what-is-a-read-only-mcp-server">What is a read-only MCP server ↗</Link>
-        <Link href="/guides/how-to-check-mcp-tool-safely">How to check a tool first ↗</Link>
+        <Link href="/guides/what-is-a-read-only-mcp-server">Read-only MCP server ↗</Link>
+        <Link href="/guides/how-to-check-mcp-tool-safely">Check an MCP tool first ↗</Link>
         <a href={PRODUCT.repo} target="_blank" rel="noreferrer">
           Read the source ↗
         </a>
