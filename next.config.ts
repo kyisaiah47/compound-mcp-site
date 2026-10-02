@@ -18,8 +18,6 @@ const LANE_REDIRECTS: { source: string; destination: string; permanent: boolean 
   { source: "/pl/:content", destination: "/?utm_source=founder-peerlist&utm_medium=social&utm_content=:content", permanent: false },
   { source: "/dv", destination: "/?utm_source=founder-devto&utm_medium=social", permanent: false },
   { source: "/dv/:content", destination: "/?utm_source=founder-devto&utm_medium=social&utm_content=:content", permanent: false },
-  { source: "/kd", destination: "/?utm_source=compound-devto&utm_medium=social", permanent: false },
-  { source: "/kd/:content", destination: "/?utm_source=compound-devto&utm_medium=social&utm_content=:content", permanent: false },
   { source: "/th", destination: "/?utm_source=founder-threads&utm_medium=social", permanent: false },
   { source: "/th/:content", destination: "/?utm_source=founder-threads&utm_medium=social&utm_content=:content", permanent: false },
   { source: "/ig", destination: "/?utm_source=founder-ig&utm_medium=social", permanent: false },
