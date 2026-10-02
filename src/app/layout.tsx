@@ -6,6 +6,7 @@ import "@/components/site-view/simple.css";
 import SiteViewProvider from "@/components/site-view/SiteViewProvider";
 import Welcome from "@/components/site-view/Welcome";
 import Mark from "@/components/site-view/Mark";
+import Analytics from "@/components/Analytics";
 const mono = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={mono.variable}>
       <body>
+        <Analytics />
         <SmoothScroll />
         <SiteViewProvider
           slug="compound-mcp"
