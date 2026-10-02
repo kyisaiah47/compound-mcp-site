@@ -1,5 +1,5 @@
 #!/bin/bash
-# scripts/deploy.sh for compound-mcp-site. Cloudflare Workers.
+# scripts/deploy.sh for openlookup-site (repo directory compound-mcp-site). Cloudflare Workers.
 #
 # The estate deploys to Cloudflare Workers through opennextjs-cloudflare. Nothing here targets
 # Vercel and this repo carries no vercel.json: measured 2026-09-19, all 57 Vercel projects read
@@ -27,11 +27,11 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
-WORKER="https://compound-mcp-site.kyisaiah47.workers.dev"
-HOST="compound-mcp.thecompound.tech"
+WORKER="https://openlookup-site.kyisaiah47.workers.dev"
+HOST="openlookup.thecompound.tech"
 
 . "$HOME/CompoundLabs/compound-ops/tools/deploy-lock.sh" || { echo "deploy gate missing, refusing to deploy" >&2; exit 1; }
-deploy_gate "compound-mcp-site"
+deploy_gate "openlookup-site"
 
 echo "==> the register gate, before anything is built"
 npm run check
@@ -71,4 +71,4 @@ if [ -n "$HOST" ]; then
   fi
 fi
 
-echo "compound-mcp-site: deployed and verified"
+echo "openlookup-site: deployed and verified"

@@ -2,7 +2,7 @@ export const PRODUCT = {
   name: "openlookup",
   displayName: "OpenLookup",
   version: "0.5.1",
-  host: "compound-mcp.thecompound.tech",
+  host: "openlookup.thecompound.tech",
   repo: "https://github.com/kyisaiah47/openlookup",
   npm: "https://www.npmjs.com/package/openlookup",
   mcpName: "tech.thecompound/openlookup",

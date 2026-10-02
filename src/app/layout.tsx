@@ -15,12 +15,12 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "OpenLookup",
   description: "Eleven read-only lookup tools backed by live public data.",
-  metadataBase: new URL("https://compound-mcp.thecompound.tech"),
+  metadataBase: new URL("https://openlookup.thecompound.tech"),
   alternates: { canonical: "/" },
   openGraph: {
     title: "OpenLookup",
     description: "Eleven read-only lookup tools backed by live public data.",
-    url: "https://compound-mcp.thecompound.tech/",
+    url: "https://openlookup.thecompound.tech/",
     siteName: "OpenLookup",
     type: "website",
     images: [{ url: "/opengraph-image" }],
@@ -34,7 +34,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "OpenLookup",
-    url: "https://compound-mcp.thecompound.tech",
+    url: "https://openlookup.thecompound.tech",
     publisher: {
       "@type": "Organization",
       "@id": "https://thecompound.tech/#organization",

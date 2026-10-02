@@ -45,7 +45,7 @@ const POSTHOG_UI_HOST = 'https://us.posthog.com';
 
 // The roster slug this app was built for. Every event carries it as the `app` property, and
 // that property is what the estate digest and analytics dashboard group by.
-const APP_SLUG = 'compound-mcp-site';
+const APP_SLUG = 'openlookup-site';
 
 // host -> clean app slug. Only *.thecompound.tech encodes the slug in the subdomain (the former
 // studio domain 308s to it at Cloudflare before any app sees a request). For any other host the subdomain is NOT the
