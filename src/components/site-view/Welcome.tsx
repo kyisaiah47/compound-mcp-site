@@ -119,7 +119,7 @@ export default function Welcome({ copy }: { copy: WelcomeCopy }) {
       </section>
       <section className="sv-welcome-choose">
         <div>
-          <h3>Choose how to explore.</h3>
+          <h3>How would you like to explore?</h3>
           <p>You can switch anytime.</p>
         </div>
         <div className="sv-choices">
