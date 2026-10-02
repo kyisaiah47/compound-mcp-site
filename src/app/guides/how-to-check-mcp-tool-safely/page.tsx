@@ -25,7 +25,7 @@ export default function CheckMcpToolSafely() {
       <p>Read the tool name, description, input schema, output schema, and annotations before invocation. The MCP tools specification says a tool definition includes those fields and that clients must treat annotations as untrusted unless the server is trusted. A description that says “read-only” is useful context, but it is not permission control.</p>
 
       <h2>How do you confirm that an MCP tool is read-only?</h2>
-      <p>Confirm that the requested action is a lookup and that the server exposes no create, update, or delete operation for the task. OpenLookup presents eleven lookup tools, marks them read-only in its captured surface, and requires no API key or signup according to the project README. The practical boundary is still narrower than a compliance conclusion: each result covers the public source that the lookup checked.</p>
+      <p>Confirm that the requested action is a lookup. Confirm that the server exposes no create, update, or delete operation for the task. OpenLookup exposes eleven lookup tools. Its captured surface marks the tools read-only. The project README states that OpenLookup requires no API key or signup. Each result covers the public source that the lookup checked, so it does not by itself establish a compliance conclusion.</p>
       <ol>
         <li>Match the user question to one named lookup and its required arguments.</li>
         <li>Reject arguments that would turn a lookup into an unrequested mutation or disclosure.</li>
@@ -34,10 +34,10 @@ export default function CheckMcpToolSafely() {
       </ol>
 
       <h2>How should an MCP client handle a tool result?</h2>
-      <p>An MCP result can contain text in <code>content</code> and structured data in <code>structuredContent</code>. The specification recommends validating structured results, checking errors, and using timeouts. OpenLookup returns an answer-sized result with a checked receipt so an agent can distinguish a current lookup from an unsupported generalization.</p>
+      <p>An MCP result can contain text in <code>content</code> and structured data in <code>structuredContent</code>. The specification recommends validating structured results, checking errors, and using timeouts. OpenLookup returns an answer-sized result with a checked receipt. The receipt lets an agent distinguish a current lookup from an unsupported generalization.</p>
 
-      <h2>What is the safest first call with OpenLookup?</h2>
-      <p>Start with one narrow question, install the server with <code>npx -y openlookup</code>, and inspect the returned receipt before asking a follow-up. A clear result is evidence about the indexed source and its stated coverage; it is not proof that every related record is complete or current.</p>
+      <h2>The safest first call with OpenLookup</h2>
+      <p>You start with one narrow question. You install the server with <code>npx -y openlookup</code>. You inspect the returned receipt before asking a follow-up. A clear result provides evidence about the indexed source and its stated coverage. It does not prove that every related record is complete or current.</p>
 
       <footer className="guide__sources"><span className="eyebrow">Sources fetched 2026-09-30</span><a href={specUrl}>Model Context Protocol specification: Tools</a><a href={readmeUrl}>OpenLookup README</a></footer>
     </>
