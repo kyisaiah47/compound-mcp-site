@@ -12,7 +12,7 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column", fontFamily: "sans-serif", fontSize: 68, fontWeight: 600, lineHeight: 1.05 }}>Current answers<br />for questions that go stale.</div>
         <div style={{ color: "#979e9a", fontSize: 24 }}>11 read-only lookup tools backed by live public data.</div>
       </div>
-      <div style={{ color: "#aeba5c", fontSize: 22 }}>compound-mcp.thecompound.tech</div>
+      <div style={{ color: "#aeba5c", fontSize: 22 }}>openlookup.thecompound.tech</div>
     </div>,
     { ...size },
   );
