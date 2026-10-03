@@ -232,7 +232,9 @@
 .sv-welcome-top .sv-brand { font-size: 14px; }
 .sv-welcome-top .sv-mark { width: 20px; height: 20px; }
 .sv-welcome-top small { color: var(--sv-dimmer); font: 10px var(--sv-mono); }
-.sv-welcome-top > button { display: grid; place-items: center; font-size: 26px; width: 44px; height: 44px; color: var(--sv-dim); }
+.sv-welcome-top > button { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; background: none; border: 0; border-radius: 6px; cursor: pointer; line-height: 1; color: var(--sv-dim); }
+.sv-welcome-top > button:focus-visible { outline-offset: -2px; }
+.sv-welcome-top > button svg { display: block; width: 20px; height: 20px; }
 .sv-welcome-top > button:hover { color: var(--sv-ink); }
 .sv-welcome-intro { padding: 30px 32px 24px; }
 .sv-welcome-intro h2 { font: 500 clamp(26px, 3vw, 36px)/1.2 var(--sv-sans); letter-spacing: -0.035em; padding: 14px 0; }
